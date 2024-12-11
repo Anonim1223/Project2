@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погодный сервис</title>
+</head>
+<body>
+    <h1>Проверка погодных условий</h1>
+    <form action="/check_weather" method="post">
+        <label for="start_city">Начальный город:</label>
+        <input type="text" id="start_city" name="start_city" required><br><br>
+
+        <label for="end_city">Конечный город:</label>
+        <input type="text" id="end_city" name="end_city" required><br><br>
+
+        <button type="submit">Проверить погоду</button>
+    </form>
+
+    {% if result %}
+        <h2>Результат оценки погоды:</h2>
+        <p>{{ result1 }}</p>
+        <p>{{ result2 }}</p>
+    {% endif %}
+
+    {% if error %}
+        <h2 style="color: red;">Ошибка:</h2>
+        <p>{{ error }}</p>
+    {% endif %}
+</body>
+</html>

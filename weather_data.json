@@ -1,0 +1,9 @@
+{
+    "city": "Burinovo",
+    "weather": {
+        "temperature": -6.1,
+        "humidity": 91,
+        "wind_speed": 5.3,
+        "precipitation_probability": 0.0
+    }
+}
